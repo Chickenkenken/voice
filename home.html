@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<style type="text/css">
+ body {
+        background-image: url(bg01.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+
+.hcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  color: yellow;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.menu-btn {
+  display: block;
+  font-size: 24px;
+  color: yellow;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0; /* Position on the right side */
+  width: 50px; /* Set initial width for larger screens */
+  background-color: black;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links a {
+  color: yellow;
+  margin: 8px 0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .hcontainer {
+    padding: 10px 15px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Adjust as needed */
+        }
+
+        .child {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child div {
+            margin: 10px;
+        }
+
+        .child img {
+            width: 100px; /* Adjust image size as needed */
+            height: 100px; /* Adjust image size as needed */
+            filter: drop-shadow(1px 1px 2px black);
+        }
+    </style>
+</head>
+<body>
+   <header class="hcontainer">
+  <div class="logo"><img src="originalVoiceLogo.png"></div>
+  <h1 class="title">The Victims' Outreach and Incidents' Control Environment</h1>
+  <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+  <nav class="nav-links">
+    <a href="profile1.php">Profile</a>
+    <a href="home.html">Home</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+    <div class="container">
+        <div class="child">
+            <div><a href="picCam.php"><img src="camicon.png"></a></div>
+            <div><a href="vidCam.php"><img src="videoicon.png"></a></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
+    </script>
+</body>
+</html>
